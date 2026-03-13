@@ -1,0 +1,28 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="8" y="8" width="112" height="112" rx="32" fill="url(#bg)"/>
+  <path d="M28 83H100" stroke="#18202B" stroke-opacity="0.16" stroke-width="4" stroke-linecap="round"/>
+  <path d="M31 83V69C31 67.3431 32.3431 66 34 66H40C41.6569 66 43 67.3431 43 69V83" fill="#18202B" fill-opacity="0.22"/>
+  <path d="M48 83V59C48 57.3431 49.3431 56 51 56H57C58.6569 56 60 57.3431 60 59V83" fill="#18202B" fill-opacity="0.26"/>
+  <path d="M65 83V48C65 46.3431 66.3431 45 68 45H74C75.6569 45 77 46.3431 77 48V83" fill="#18202B" fill-opacity="0.3"/>
+  <path d="M82 83V62C82 60.3431 83.3431 59 85 59H91C92.6569 59 94 60.3431 94 62V83" fill="#18202B" fill-opacity="0.24"/>
+  <path d="M46.4689 38.6832C46.4689 32.783 51.1983 28 57.0329 28C62.8675 28 67.5968 32.783 67.5968 38.6832C67.5968 48.2301 57.0329 56 57.0329 56C57.0329 56 46.4689 48.2301 46.4689 38.6832Z" fill="url(#pinA)"/>
+  <circle cx="57.033" cy="38.9629" r="3.99023" fill="white" fill-opacity="0.95"/>
+  <path d="M60.4031 46.9271C60.4031 42.1251 64.2539 38.2324 69.0046 38.2324C73.7552 38.2324 77.606 42.1251 77.606 46.9271C77.606 54.6999 69.0046 61.0236 69.0046 61.0236C69.0046 61.0236 60.4031 54.6999 60.4031 46.9271Z" fill="url(#pinB)" fill-opacity="0.94"/>
+  <circle cx="69.0045" cy="47.154" r="3.25" fill="white" fill-opacity="0.95"/>
+  <path d="M72.8 32.8C75.8667 29.7333 80.5333 29.7333 83.6 32.8" stroke="#18202B" stroke-opacity="0.18" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M77 26.8C82.3333 21.4667 90.2 21.4667 95.5333 26.8" stroke="#18202B" stroke-opacity="0.12" stroke-width="3.5" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="bg" x1="24" y1="18" x2="110" y2="116" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF6EE"/>
+      <stop offset="1" stop-color="#E9F5F6"/>
+    </linearGradient>
+    <linearGradient id="pinA" x1="48" y1="28" x2="70" y2="54" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#66C6CF"/>
+      <stop offset="1" stop-color="#F2A87D"/>
+    </linearGradient>
+    <linearGradient id="pinB" x1="62" y1="38" x2="80" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F2A87D"/>
+      <stop offset="1" stop-color="#66C6CF"/>
+    </linearGradient>
+  </defs>
+</svg>
