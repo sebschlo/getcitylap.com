@@ -1,28 +1,58 @@
 <svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background plate -->
   <rect x="8" y="8" width="112" height="112" rx="32" fill="url(#bg)"/>
-  <path d="M28 83H100" stroke="#18202B" stroke-opacity="0.16" stroke-width="4" stroke-linecap="round"/>
-  <path d="M31 83V69C31 67.3431 32.3431 66 34 66H40C41.6569 66 43 67.3431 43 69V83" fill="#18202B" fill-opacity="0.22"/>
-  <path d="M48 83V59C48 57.3431 49.3431 56 51 56H57C58.6569 56 60 57.3431 60 59V83" fill="#18202B" fill-opacity="0.26"/>
-  <path d="M65 83V48C65 46.3431 66.3431 45 68 45H74C75.6569 45 77 46.3431 77 48V83" fill="#18202B" fill-opacity="0.3"/>
-  <path d="M82 83V62C82 60.3431 83.3431 59 85 59H91C92.6569 59 94 60.3431 94 62V83" fill="#18202B" fill-opacity="0.24"/>
-  <path d="M46.4689 38.6832C46.4689 32.783 51.1983 28 57.0329 28C62.8675 28 67.5968 32.783 67.5968 38.6832C67.5968 48.2301 57.0329 56 57.0329 56C57.0329 56 46.4689 48.2301 46.4689 38.6832Z" fill="url(#pinA)"/>
-  <circle cx="57.033" cy="38.9629" r="3.99023" fill="white" fill-opacity="0.95"/>
-  <path d="M60.4031 46.9271C60.4031 42.1251 64.2539 38.2324 69.0046 38.2324C73.7552 38.2324 77.606 42.1251 77.606 46.9271C77.606 54.6999 69.0046 61.0236 69.0046 61.0236C69.0046 61.0236 60.4031 54.6999 60.4031 46.9271Z" fill="url(#pinB)" fill-opacity="0.94"/>
-  <circle cx="69.0045" cy="47.154" r="3.25" fill="white" fill-opacity="0.95"/>
-  <path d="M72.8 32.8C75.8667 29.7333 80.5333 29.7333 83.6 32.8" stroke="#18202B" stroke-opacity="0.18" stroke-width="3.5" stroke-linecap="round"/>
-  <path d="M77 26.8C82.3333 21.4667 90.2 21.4667 95.5333 26.8" stroke="#18202B" stroke-opacity="0.12" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Skyline removed for app-icon clarity -->
+
+  <!-- Pin cluster
+       Main placement/size control: transform translate(64 50) scale(1.5) -->
+  <g transform="translate(64 50) scale(1.5) translate(-64 -44)">
+    <!-- Left translucent pin (rotated inward).
+         Rotation pivot: (44, 45.8) | Increase angle to tilt more toward center. -->
+    <g transform="rotate(-15 44 45.8)">
+      <path d="M28 45.5C28 36.3873 35.1634 29 44 29C52.8366 29 60 36.3873 60 45.5C60 60.2515 44 72.2 44 72.2C44 72.2 28 60.2515 28 45.5Z" fill="url(#pinLeft)" fill-opacity="0.84"/>
+      <circle cx="44" cy="45.8" r="9.5" fill="#FFFFFF" fill-opacity="0.5"/>
+    </g>
+
+    <!-- Right translucent pin (rotated inward).
+         Rotation pivot: (84, 45.8) | Increase absolute angle to tilt more toward center. -->
+    <g transform="rotate(15 84 45.8)">
+      <path d="M68 45.5C68 36.3873 75.1634 29 84 29C92.8366 29 100 36.3873 100 45.5C100 60.2515 84 72.2 84 72.2C84 72.2 68 60.2515 68 45.5Z" fill="url(#pinRight)" fill-opacity="0.84"/>
+      <circle cx="84" cy="45.8" r="9.5" fill="#FFFFFF" fill-opacity="0.5"/>
+    </g>
+
+    <!-- Center pin -->
+    <g>
+      <!-- Tip sits near x=64, y=70.8 -->
+      <path d="M45 42.5C45 32.835 53.5066 25 64 25C74.4934 25 83 32.835 83 42.5C83 58.0997 64 70.8 64 70.8C64 70.8 45 58.0997 45 42.5Z" fill="url(#pinCenter)"/>
+      <!-- Inner badge circle -->
+      <circle cx="64" cy="43.3" r="11.3" fill="#111821" fill-opacity="0.58"/>
+      <!-- Full-edge crosshairs (drawn above gray badge, below C/L glyph) -->
+      <path d="M64.2 8V120M8 43.3H120" stroke="white" stroke-opacity="0.86" stroke-width="1.9" stroke-linecap="round"/>
+      <!-- Stylized C -->
+      <path d="M70.8 37.8C69.3 36.1 66.9 35 64.2 35C59.5 35 55.8 38.7 55.8 43.3C55.8 47.9 59.5 51.6 64.2 51.6C66.9 51.6 69.3 50.5 70.8 48.8" stroke="white" stroke-width="3.1" stroke-linecap="round"/>
+      <!-- Stylized L (vertex aligned to crosshair center at 64.2,43.3) -->
+      <path d="M64.2 36.3V43.3H70.4" stroke="white" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+
+  <!-- Palette -->
   <defs>
     <linearGradient id="bg" x1="24" y1="18" x2="110" y2="116" gradientUnits="userSpaceOnUse">
       <stop stop-color="#FFF6EE"/>
       <stop offset="1" stop-color="#E9F5F6"/>
     </linearGradient>
-    <linearGradient id="pinA" x1="48" y1="28" x2="70" y2="54" gradientUnits="userSpaceOnUse">
+    <linearGradient id="pinLeft" x1="36" y1="34" x2="58" y2="66" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5EB8D8"/>
+      <stop offset="1" stop-color="#8CCEA4"/>
+    </linearGradient>
+    <linearGradient id="pinRight" x1="71" y1="34" x2="93" y2="66" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F2A87D"/>
+      <stop offset="1" stop-color="#D88EC6"/>
+    </linearGradient>
+    <linearGradient id="pinCenter" x1="50" y1="28" x2="75" y2="64" gradientUnits="userSpaceOnUse">
       <stop stop-color="#66C6CF"/>
       <stop offset="1" stop-color="#F2A87D"/>
-    </linearGradient>
-    <linearGradient id="pinB" x1="62" y1="38" x2="80" y2="60" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#F2A87D"/>
-      <stop offset="1" stop-color="#66C6CF"/>
     </linearGradient>
   </defs>
 </svg>
