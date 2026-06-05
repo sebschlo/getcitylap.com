@@ -73,7 +73,9 @@ a {
 .hero,
 .feature-grid,
 .privacy-band,
-.closing {
+.closing,
+.site-footer,
+.docs-page {
   width: min(1120px, calc(100% - 32px));
   margin: 0 auto;
 }
@@ -647,6 +649,80 @@ a {
   margin: 28px auto 42px;
 }
 
+.site-footer {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  padding: 0 0 42px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.site-footer a:hover {
+  color: var(--text);
+}
+
+.docs-page {
+  padding: 82px 0 56px;
+}
+
+.docs-hero {
+  max-width: 720px;
+}
+
+.docs-hero h1 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2.7rem, 6vw, 5.4rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.docs-hero p:not(.eyebrow) {
+  max-width: 58ch;
+  margin: 22px 0 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.docs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 34px;
+}
+
+.doc-card {
+  display: grid;
+  gap: 10px;
+  min-height: 180px;
+  padding: 28px;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.46);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease;
+}
+
+.doc-card:hover,
+.doc-card:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(102, 198, 207, 0.28);
+}
+
+.doc-card strong {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.5rem;
+}
+
+.doc-card span:last-child {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
 .is-hidden {
   display: none;
 }
@@ -665,7 +741,8 @@ a {
   }
 
   .shot-grid,
-  .feature-grid {
+  .feature-grid,
+  .docs-grid {
     grid-template-columns: 1fr;
   }
 
