@@ -51,47 +51,23 @@ function runAnimations() {
     return;
   }
 
-  window.gsap.to(".ambient-one", {
-    x: -30,
-    y: 24,
-    duration: 6,
-    repeat: -1,
-    yoyo: true,
-    ease: "sine.inOut"
-  });
+  const float = (selector, y, duration) => {
+    if (!document.querySelector(selector)) {
+      return;
+    }
+    window.gsap.to(selector, {
+      y,
+      duration,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut"
+    });
+  };
 
-  window.gsap.to(".ambient-two", {
-    x: 22,
-    y: -18,
-    duration: 7,
-    repeat: -1,
-    yoyo: true,
-    ease: "sine.inOut"
-  });
-
-  window.gsap.to(".floating-card-one", {
-    y: -10,
-    duration: 3.6,
-    repeat: -1,
-    yoyo: true,
-    ease: "sine.inOut"
-  });
-
-  window.gsap.to(".floating-card-two", {
-    y: 12,
-    duration: 4.2,
-    repeat: -1,
-    yoyo: true,
-    ease: "sine.inOut"
-  });
-
-  window.gsap.to(".floating-card-three", {
-    y: -8,
-    duration: 3.2,
-    repeat: -1,
-    yoyo: true,
-    ease: "sine.inOut"
-  });
+  float(".chip-updated", -8, 3.4);
+  float(".chip-location", 10, 4);
+  float(".av-out-1", -10, 3);
+  float(".av-out-2", 9, 3.8);
 
   window.gsap.to(".reveal", {
     opacity: 1,
