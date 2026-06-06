@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Citylap Data Deletion Request</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #f5f8fc;
+        --panel: #ffffff;
+        --text: #142232;
+        --muted: #5a7086;
+        --border: #dbe7f3;
+        --accent: #2f8fd9;
+        --accent-soft: rgba(47, 143, 217, 0.08);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #09131d;
+          --panel: #111d29;
+          --text: #edf4fb;
+          --muted: #b4c4d6;
+          --border: rgba(255, 255, 255, 0.14);
+          --accent: #78c8ff;
+          --accent-soft: rgba(120, 200, 255, 0.12);
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 24px;
+        background: var(--bg);
+        color: var(--text);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 14px;
+        line-height: 1.65;
+      }
+
+      main {
+        max-width: 860px;
+        margin: 0 auto;
+      }
+
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 24px;
+        margin-bottom: 18px;
+      }
+
+      .eyebrow {
+        margin: 0 0 10px;
+        color: var(--accent);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0 0 12px;
+        line-height: 1.25;
+      }
+
+      h1 {
+        font-size: 1.75rem;
+      }
+
+      h2 {
+        font-size: 1.15rem;
+      }
+
+      h3 {
+        font-size: 0.95rem;
+        margin-top: 18px;
+      }
+
+      p {
+        margin: 0 0 14px;
+      }
+
+      ul {
+        margin: 0 0 14px 20px;
+        padding: 0;
+      }
+
+      li + li {
+        margin-top: 8px;
+      }
+
+      .meta {
+        margin-bottom: 18px;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .summary {
+        background: var(--accent-soft);
+      }
+
+      .request-button {
+        display: inline-block;
+        margin: 4px 0 8px;
+        padding: 12px 22px;
+        border-radius: 999px;
+        background: var(--accent);
+        color: #ffffff;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .request-button {
+          color: #06131f;
+        }
+      }
+
+      .contact {
+        font-weight: 600;
+      }
+
+      a {
+        color: var(--accent);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="card">
+        <p class="eyebrow">Citylap Legal</p>
+        <h1>Data Deletion Request</h1>
+        <p class="meta">Last Updated: June 6, 2026</p>
+        <p>
+          You can ask Technical Assemblage LLC to delete your Citylap account and
+          the personal information associated with it at any time. This page
+          explains what gets deleted, how to make a request, and how long it
+          takes.
+        </p>
+      </section>
+
+      <section class="card summary">
+        <h2>How to Request Deletion</h2>
+        <p>
+          Email us from any address and we'll process your request. The link
+          below opens a pre-filled message — just send it. Including the email
+          address or phone number associated with your Citylap account helps us
+          locate and verify it faster.
+        </p>
+        <p>
+          <a
+            class="request-button"
+            href="mailto:info@technicalassemblage.com?subject=Data%20Deletion%20Request&body=Please%20delete%20my%20Citylap%20account%20and%20all%20associated%20data.%0D%0A%0D%0AEmail%20or%20phone%20number%20on%20my%20account%3A%20%0D%0A"
+            >Request data deletion</a
+          >
+        </p>
+        <p>
+          Or email us directly at
+          <a href="mailto:info@technicalassemblage.com">info@technicalassemblage.com</a>
+          with the subject "Data Deletion Request."
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>What Gets Deleted</h2>
+        <p>
+          When we process your request, we delete the account information and
+          personal data we hold about you, including:
+        </p>
+        <ul>
+          <li>Your account record, including email address, profile details, and any password credentials</li>
+          <li>The cryptographic hash of your verified phone number and its verification timestamp</li>
+          <li>Your city-level location records and sharing connections</li>
+          <li>Encrypted shared location content stored on our servers (which only you and your recipients can decrypt)</li>
+          <li>Newsletter or launch-list signups tied to your email address</li>
+        </ul>
+        <p>
+          Most of your data — including your precise GPS coordinates — never
+          leaves your device, so it is removed when you uninstall the app or
+          delete it through your device settings.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>What We May Retain</h2>
+        <p>
+          We may retain a limited amount of information where we are required or
+          permitted to do so, for example to:
+        </p>
+        <ul>
+          <li>Comply with legal, tax, accounting, or regulatory obligations</li>
+          <li>Resolve disputes, enforce our agreements, and prevent fraud or abuse</li>
+          <li>Maintain security and the integrity of the Service</li>
+        </ul>
+        <p>
+          Any retained information is kept only as long as reasonably necessary
+          for these purposes, and is deleted or de-identified afterward.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Timeline</h2>
+        <p>
+          We aim to confirm and complete deletion requests within 30 days of
+          receiving them. If we need additional information to verify your
+          identity or locate your account, we'll reach out to the email address
+          you contact us from.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Contact Us</h2>
+        <p class="contact">Technical Assemblage LLC</p>
+        <p class="contact">502 W 7th St Ste 100</p>
+        <p class="contact">Erie, PA 16502</p>
+        <p class="contact">info@technicalassemblage.com</p>
+      </section>
+    </main>
+  </body>
+</html>
