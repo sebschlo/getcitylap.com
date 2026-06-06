@@ -898,6 +898,7 @@ a {
   position: absolute;
   top: 14px;
   right: 16px;
+  z-index: 2;
   display: grid;
   place-items: center;
   width: 34px;
