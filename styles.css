@@ -86,9 +86,9 @@ a {
 }
 
 .brand-mark {
-  width: 38px;
-  height: 38px;
-  border-radius: 11px;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
   box-shadow: 0 6px 16px -4px rgba(43, 185, 140, 0.55);
   flex-shrink: 0;
 }
