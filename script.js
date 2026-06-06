@@ -1,46 +1,54 @@
-const siteConfig = {
-  iosUrl: "#",
-  androidUrl: "#",
-  supportEmail: "support@citylap.app",
-  githubUrl: ""
-};
+// ── Launch-notification modal ──────────────────────────────────────────
+// Until the apps are live, every call-to-action opens a signup modal where
+// visitors can leave their email (handled by Buttondown).
+function setupNotifyModal() {
+  const modal = document.getElementById("notify-modal");
+  if (!modal) {
+    return;
+  }
 
-function applyLinks() {
-  const iosLinks = document.querySelectorAll('[data-role="ios-link"]');
-  const androidLinks = document.querySelectorAll('[data-role="android-link"]');
-  const supportLinks = document.querySelectorAll('[data-role="support-link"]');
-  const githubLinks = document.querySelectorAll('[data-role="github-link"]');
-
-  iosLinks.forEach((link) => {
-    link.href = siteConfig.iosUrl;
-    if (siteConfig.iosUrl === "#") {
-      link.setAttribute("aria-disabled", "true");
-      link.addEventListener("click", (event) => event.preventDefault());
+  const openModal = (event) => {
+    if (event) {
+      event.preventDefault();
     }
+    if (typeof modal.showModal === "function") {
+      if (!modal.open) {
+        modal.showModal();
+      }
+    } else {
+      modal.setAttribute("open", "");
+    }
+    const email = modal.querySelector("#bd-email");
+    if (email) {
+      window.setTimeout(() => email.focus(), 50);
+    }
+  };
+
+  const closeModal = () => {
+    if (typeof modal.close === "function") {
+      modal.close();
+    } else {
+      modal.removeAttribute("open");
+    }
+  };
+
+  document.querySelectorAll('[data-action="notify"]').forEach((trigger) => {
+    trigger.addEventListener("click", openModal);
   });
 
-  androidLinks.forEach((link) => {
-    link.href = siteConfig.androidUrl;
-    if (siteConfig.androidUrl === "#") {
-      link.setAttribute("aria-disabled", "true");
-      link.addEventListener("click", (event) => event.preventDefault());
-    }
+  modal.querySelectorAll('[data-action="close-modal"]').forEach((trigger) => {
+    trigger.addEventListener("click", closeModal);
   });
 
-  supportLinks.forEach((link) => {
-    link.href = `mailto:${siteConfig.supportEmail}`;
-  });
-
-  githubLinks.forEach((link) => {
-    if (!siteConfig.githubUrl) {
-      return;
+  // Click on the backdrop (outside the dialog content) closes the modal.
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      closeModal();
     }
-
-    link.href = siteConfig.githubUrl;
-    link.classList.remove("is-hidden");
   });
 }
 
+// ── Entrance + ambient animations ──────────────────────────────────────
 function runAnimations() {
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (prefersReducedMotion || typeof window.gsap === "undefined") {
@@ -66,8 +74,6 @@ function runAnimations() {
 
   float(".chip-updated", -8, 3.4);
   float(".chip-location", 10, 4);
-  float(".av-out-1", -10, 3);
-  float(".av-out-2", 9, 3.8);
 
   window.gsap.to(".reveal", {
     opacity: 1,
@@ -78,5 +84,5 @@ function runAnimations() {
   });
 }
 
-applyLinks();
+setupNotifyModal();
 runAnimations();
