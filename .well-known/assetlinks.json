@@ -5,8 +5,8 @@
       "namespace": "android_app",
       "package_name": "com.getcitylap.app",
       "sha256_cert_fingerprints": [
-        "<PLAY_APP_SIGNING_SHA256>",
-        "<EAS_UPLOAD_KEY_SHA256>"
+        "9B:D2:7B:45:82:5E:51:8A:95:05:63:F9:B6:28:0C:49:05:63:4C:CD:C3:6A:8C:CF:6A:C7:0A:50:F3:1B:8D:D5",
+        "7C:CD:30:B9:42:74:DF:C0:5D:F4:4E:71:01:BC:A2:6A:2C:FA:AA:0C:84:DB:3A:C2:7F:3B:03:32:79:53:E6:BE"
       ]
     }
   }
