@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      { "appID": "9F932U8A8X.com.getcitylap.app", "paths": ["/u/*"] }
+    ]
+  },
+  "webcredentials": {
+    "apps": ["9F932U8A8X.com.getcitylap.app"]
+  }
+}
