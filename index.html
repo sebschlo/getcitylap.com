@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Citylap | Stay close, wherever life takes you</title>
+    <meta
+      name="description"
+      content="Citylap shares your city — never your street — with the people you trust. End-to-end encrypted, city-level location sharing."
+    />
+    <meta name="theme-color" content="#23a37e" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="./citylap-icon-rounded.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon-180.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <span class="brand" aria-label="Citylap">
+          <img class="brand-mark" src="./citylap-icon-rounded.svg" alt="" aria-hidden="true" width="48" height="48" />
+          <span class="brand-text">Citylap<span class="tm">™</span></span>
+        </span>
+        <button type="button" class="button button-nav" data-action="notify">Get the app</button>
+      </header>
+
+      <main id="top">
+        <section class="hero">
+          <!-- Small accent globe (bottom-left) -->
+          <svg class="hero-globe hero-globe-small" viewBox="0 0 360 360" fill="none" aria-hidden="true">
+            <circle cx="180" cy="180" r="178" stroke="#2f8fe0" stroke-width="2" stroke-opacity="0.12" />
+            <line x1="2" y1="180" x2="358" y2="180" stroke="#2f8fe0" stroke-width="2" stroke-opacity="0.12" />
+            <line x1="180" y1="2" x2="180" y2="358" stroke="#2f8fe0" stroke-width="2" stroke-opacity="0.12" />
+            <ellipse cx="180" cy="180" rx="57.6" ry="178" stroke="#2f8fe0" stroke-width="2" stroke-opacity="0.12" />
+            <ellipse cx="180" cy="180" rx="115.2" ry="178" stroke="#2f8fe0" stroke-width="2" stroke-opacity="0.12" />
+            <ellipse cx="180" cy="180" rx="158.4" ry="178" stroke="#2f8fe0" stroke-width="2" stroke-opacity="0.12" />
+            <ellipse cx="180" cy="180" rx="178" ry="57.6" stroke="#2f8fe0" stroke-width="2" stroke-opacity="0.12" />
+            <ellipse cx="180" cy="180" rx="178" ry="115.2" stroke="#2f8fe0" stroke-width="2" stroke-opacity="0.12" />
+            <ellipse cx="180" cy="180" rx="178" ry="158.4" stroke="#2f8fe0" stroke-width="2" stroke-opacity="0.12" />
+          </svg>
+
+          <div class="hero-copy reveal">
+            <div class="eyebrow-chip">
+              <svg width="17" height="19" viewBox="0 0 24 28" fill="none" aria-hidden="true">
+                <rect x="3" y="11" width="18" height="14" rx="4.4" fill="#2bb98c" />
+                <path d="M7 11V8a5 5 0 0 1 10 0v3" stroke="#2bb98c" stroke-width="2.6" stroke-linecap="round" />
+                <circle cx="12" cy="18" r="2.4" fill="#fff" />
+              </svg>
+              End-to-end encrypted location sharing
+            </div>
+
+            <h1>Overlap with the people you <span class="h1-hi">love</span>, anywhere on Earth.</h1>
+
+            <p class="lede">
+              Citylap shares where you are at <strong>city level</strong> — never an exact pin — so your
+              inner circle always knows who's near, without ever being tracked.
+            </p>
+
+            <div class="cta-row" id="download">
+              <button type="button" class="store-badge" data-action="notify">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="white" aria-hidden="true">
+                  <path d="M16.4 12.7c0-2.2 1.8-3.3 1.9-3.4-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.6.8-3.3.8-.7 0-1.7-.8-2.8-.8-1.4 0-2.8.8-3.5 2.1-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.5 2.2 2.6 2.1 1-.04 1.4-.7 2.7-.7s1.6.7 2.7.6c1.1-.02 1.8-1 2.5-2 .8-1.2 1.1-2.3 1.1-2.4-.02-.01-2.1-.8-2.1-3.2ZM14.3 5.9c.6-.7 1-1.7.9-2.7-.8.03-1.9.5-2.5 1.2-.6.6-1 1.6-.9 2.6.9.07 1.8-.4 2.5-1.1Z"/>
+                </svg>
+                <div class="store-badge-text">
+                  <div class="store-badge-top">Download on the</div>
+                  <div class="store-badge-main">App Store</div>
+                </div>
+              </button>
+              <button type="button" class="store-badge" data-action="notify">
+                <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M3.6 2.3 13 11.7l2.5-2.5L5.2 1.6a1.4 1.4 0 0 0-1.6.7Z" fill="#19C0F4"/>
+                  <path d="M3.2 2.6A1.4 1.4 0 0 0 3 3.4v17.2c0 .3.1.6.2.8L13 11.7 3.2 2.6Z" fill="#3DDC84"/>
+                  <path d="M16.8 9 14 11.7l2.8 2.8 3.5-2a1.4 1.4 0 0 0 0-2.4L16.8 9Z" fill="#FFC107"/>
+                  <path d="m14 11.7-10 9.8c.5.4 1.2.4 1.8.1l10.4-6-2.2-3.9Z" fill="#EE4135"/>
+                </svg>
+                <div class="store-badge-text">
+                  <div class="store-badge-top">Get it on</div>
+                  <div class="store-badge-main">Google Play</div>
+                </div>
+              </button>
+            </div>
+
+            <div class="trust-row">
+              <div class="trust-item">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <circle cx="10" cy="10" r="10" fill="#2bb98c" opacity="0.16"/>
+                  <path d="M5.6 10.2 8.4 13l6-6.2" stroke="#2bb98c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                City-level only
+              </div>
+              <div class="trust-item">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <circle cx="10" cy="10" r="10" fill="#2bb98c" opacity="0.16"/>
+                  <path d="M5.6 10.2 8.4 13l6-6.2" stroke="#2bb98c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                No third-party trackers
+              </div>
+              <div class="trust-item">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <circle cx="10" cy="10" r="10" fill="#2bb98c" opacity="0.16"/>
+                  <path d="M5.6 10.2 8.4 13l6-6.2" stroke="#2bb98c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Own offline geocoder
+              </div>
+            </div>
+
+          </div>
+
+          <div class="hero-visual reveal">
+            <div class="phones-cluster">
+              <!-- Complete globe sphere, centered behind the phones -->
+              <svg class="hero-globe hero-globe-main" viewBox="0 0 1040 1040" fill="none" aria-hidden="true">
+                <circle cx="520" cy="520" r="517.6" stroke="#2bb98c" stroke-width="2.4" stroke-opacity="0.16" />
+                <line x1="2.4" y1="520" x2="1037.6" y2="520" stroke="#2bb98c" stroke-width="2.4" stroke-opacity="0.16" />
+                <line x1="520" y1="2.4" x2="520" y2="1037.6" stroke="#2bb98c" stroke-width="2.4" stroke-opacity="0.16" />
+                <ellipse cx="520" cy="520" rx="166.4" ry="517.6" stroke="#2bb98c" stroke-width="2.4" stroke-opacity="0.16" />
+                <ellipse cx="520" cy="520" rx="332.8" ry="517.6" stroke="#2bb98c" stroke-width="2.4" stroke-opacity="0.16" />
+                <ellipse cx="520" cy="520" rx="457.6" ry="517.6" stroke="#2bb98c" stroke-width="2.4" stroke-opacity="0.16" />
+                <ellipse cx="520" cy="520" rx="517.6" ry="166.4" stroke="#2bb98c" stroke-width="2.4" stroke-opacity="0.16" />
+                <ellipse cx="520" cy="520" rx="517.6" ry="332.8" stroke="#2bb98c" stroke-width="2.4" stroke-opacity="0.16" />
+                <ellipse cx="520" cy="520" rx="517.6" ry="457.6" stroke="#2bb98c" stroke-width="2.4" stroke-opacity="0.16" />
+              </svg>
+
+              <!-- Back phone: timeline screenshot (shown in full) -->
+              <div class="phone phone-back">
+                <div class="phone-screen">
+                  <img src="./assets/screens-edited/timeline.png" alt="Citylap timeline — a private log of every city you've visited" />
+                  <div class="dynamic-island"></div>
+                </div>
+              </div>
+
+              <!-- Front phone: world map screenshot (shown in full) -->
+              <div class="phone phone-front">
+                <div class="phone-screen">
+                  <img src="./assets/screens-edited/map-world.png" alt="Citylap map — your circle across the world at city level" />
+                  <div class="dynamic-island"></div>
+                </div>
+              </div>
+
+              <!-- Floating marketing chips that bleed past the frame -->
+              <div class="hero-chip chip-updated">
+                <span class="chip-dot"></span> Updated 2h ago
+              </div>
+              <div class="hero-chip chip-location">📍 Philadelphia</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="feature-grid reveal" id="features">
+          <article class="feature-card">
+            <p class="card-label">01</p>
+            <h3>City-level, never a street</h3>
+            <p>
+              Your friends see which city you're in — never your exact address. Fine-grained
+              controls let you choose who sees what, without collapsing it into a single on/off switch.
+            </p>
+          </article>
+          <article class="feature-card">
+            <p class="card-label">02</p>
+            <h3>A timeline that travels</h3>
+            <p>
+              Drag back to see where everyone was, or look ahead at upcoming plans. A living map that
+              makes location feel personal and easy to read across time.
+            </p>
+          </article>
+          <article class="feature-card">
+            <p class="card-label">03</p>
+            <h3>Private by design, not checkbox</h3>
+            <p>
+              End-to-end encryption and our own offline geocoder mean your location never touches a
+              third-party server. Privacy is the default, not a premium toggle.
+            </p>
+          </article>
+        </section>
+
+        <section class="screenshots reveal" id="screenshots">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">A closer look</p>
+              <h2>Simple enough to feel familiar. Private enough to trust.</h2>
+            </div>
+            <p class="section-copy">
+              Real app screens showing how Citylap brings your circle together — at city level, with
+              controls that respect everyone's boundaries.
+            </p>
+          </div>
+
+          <div class="shot-grid">
+            <article class="shot-card">
+              <div class="shot-phone">
+                <div class="shot-screen">
+                  <img src="./assets/screens-edited/map-world.png" alt="World map view showing friends' cities at city level" />
+                  <div class="shot-island"></div>
+                </div>
+              </div>
+              <div class="shot-copy">
+                <h3>Map and presence</h3>
+                <p>The everyday view — who's where, at city level, right now.</p>
+              </div>
+            </article>
+
+            <article class="shot-card">
+              <div class="shot-phone">
+                <div class="shot-screen">
+                  <img src="./assets/screens-edited/timeline.png" alt="Timeline showing past and future locations" />
+                  <div class="shot-island"></div>
+                </div>
+              </div>
+              <div class="shot-copy">
+                <h3>Timeline</h3>
+                <p>Rewind to yesterday or fast-forward to Friday's plans.</p>
+              </div>
+            </article>
+
+            <article class="shot-card">
+              <div class="shot-phone">
+                <div class="shot-screen">
+                  <img src="./assets/screens-edited/social.png" alt="Social controls and friend management" />
+                  <div class="shot-island"></div>
+                </div>
+              </div>
+              <div class="shot-copy">
+                <h3>Your circle</h3>
+                <p>Approve followers and fine-tune visibility person by person.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="privacy-band reveal" id="privacy">
+          <div>
+            <p class="eyebrow">Why it feels different</p>
+            <h2>Closeness without surveillance.</h2>
+          </div>
+          <div class="privacy-points">
+            <p>
+              Sharing at city level means your friends feel near without anyone — including us — knowing
+              your exact whereabouts. Your data is encrypted end-to-end and geocoded entirely on your device.
+            </p>
+            <p>
+              The result is connection that feels calm, clear, and actually private.
+            </p>
+          </div>
+        </section>
+
+        <section class="closing reveal">
+          <div>
+            <p class="eyebrow">Available soon</p>
+            <h2>Stay close to the people who matter most.</h2>
+          </div>
+          <div class="closing-actions">
+            <button type="button" class="button button-primary" data-action="notify">App Store</button>
+            <button type="button" class="button button-secondary" data-action="notify">Google Play</button>
+            <a class="button button-ghost" href="mailto:info@technicalassemblage.com">Support</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <nav class="footer-links" aria-label="Footer">
+          <a href="./docs/privacy-policy.html">Privacy Policy</a>
+          <a href="./docs/terms-of-service.html">Terms of Service</a>
+          <a href="./docs/data-deletion.html">Delete Your Data</a>
+          <a href="mailto:info@technicalassemblage.com">Contact support</a>
+          <a href="https://technicalassemblage.com/" target="_blank" rel="noreferrer">Developer</a>
+        </nav>
+        <p class="footer-copy">
+          © 2026 Technical Assemblage. Citylap™ is a trademark of Technical Assemblage. All rights reserved.
+        </p>
+      </footer>
+    </div>
+
+    <!-- Launch notification signup -->
+    <dialog id="notify-modal" class="notify-modal" aria-labelledby="notify-title">
+      <div class="notify-content">
+        <button type="button" class="notify-close" data-action="close-modal" aria-label="Close">&times;</button>
+        <p class="eyebrow">Coming soon</p>
+        <h2 id="notify-title">Be the first to know</h2>
+        <p class="notify-sub">
+          Citylap isn't out just yet. Drop your email and we'll let you know the moment it
+          launches — no spam, ever.
+        </p>
+        <form
+          action="https://buttondown.com/api/emails/embed-subscribe/technicalassemblage"
+          method="post"
+          target="_blank"
+          class="embeddable-buttondown-form notify-form"
+        >
+          <label for="bd-email">Email address</label>
+          <input type="email" name="email" id="bd-email" placeholder="you@example.com" required />
+          <button type="submit" class="button button-primary">Notify me</button>
+        </form>
+        <p class="notify-powered">
+          <a href="https://buttondown.com/refer/technicalassemblage" target="_blank" rel="noreferrer">
+            Powered by Buttondown.
+          </a>
+        </p>
+      </div>
+    </dialog>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
