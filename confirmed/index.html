@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Citylap | Email confirmed</title>
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#23a37e" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="../citylap-icon-rounded.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon-180.png" />
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg-a: #f0f9ff;
+        --bg-b: #dceefa;
+        --bg-c: #cae5f7;
+        --panel: rgba(255, 252, 249, 0.9);
+        --text: #15212e;
+        --muted: #42596b;
+        --line: rgba(21, 33, 46, 0.1);
+        --accent: #2bb98c;
+        --accent-deep: #1e9a73;
+        --warn: #e0932f;
+        --warn-soft: rgba(224, 147, 47, 0.14);
+        --ok-soft: rgba(43, 185, 140, 0.14);
+        --shadow: 0 24px 60px rgba(20, 40, 70, 0.14);
+        --button-text: #ffffff;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg-a: #09131d;
+          --bg-b: #0c1926;
+          --bg-c: #0e1e2e;
+          --panel: rgba(17, 29, 41, 0.92);
+          --text: #edf4fb;
+          --muted: #b4c4d6;
+          --line: rgba(255, 255, 255, 0.14);
+          --accent: #3ecf9f;
+          --accent-deep: #2bb98c;
+          --warn: #f0b45e;
+          --warn-soft: rgba(240, 180, 94, 0.16);
+          --ok-soft: rgba(62, 207, 159, 0.16);
+          --shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+          --button-text: #06131f;
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 28px;
+        padding: 24px 16px 40px;
+        font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+        color: var(--text);
+        background: linear-gradient(165deg, var(--bg-a) 0%, var(--bg-b) 55%, var(--bg-c) 100%);
+        background-attachment: fixed;
+        text-align: center;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        font-family: "Bricolage Grotesque", "Plus Jakarta Sans", system-ui, sans-serif;
+        font-size: 1.35rem;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .brand img {
+        width: 44px;
+        height: 44px;
+      }
+
+      .brand .tm {
+        font-size: 0.55em;
+        vertical-align: super;
+        opacity: 0.6;
+      }
+
+      .card {
+        width: min(460px, 100%);
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        box-shadow: var(--shadow);
+        padding: 40px 28px 32px;
+        backdrop-filter: blur(20px);
+      }
+
+      .status-icon {
+        width: 72px;
+        height: 72px;
+        margin: 0 auto 20px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--ok-soft);
+      }
+
+      .card[data-tone="warn"] .status-icon {
+        background: var(--warn-soft);
+      }
+
+      .status-icon svg {
+        width: 36px;
+        height: 36px;
+      }
+
+      .icon-ok {
+        display: block;
+      }
+
+      .icon-warn {
+        display: none;
+      }
+
+      .card[data-tone="warn"] .icon-ok {
+        display: none;
+      }
+
+      .card[data-tone="warn"] .icon-warn {
+        display: block;
+      }
+
+      .eyebrow {
+        margin: 0 0 10px;
+        color: var(--accent-deep);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .card[data-tone="warn"] .eyebrow {
+        color: var(--warn);
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-family: "Bricolage Grotesque", "Plus Jakarta Sans", system-ui, sans-serif;
+        font-size: 1.7rem;
+        line-height: 1.2;
+        letter-spacing: -0.01em;
+      }
+
+      .copy {
+        margin: 0 auto 24px;
+        max-width: 36ch;
+        color: var(--muted);
+        font-size: 0.98rem;
+        line-height: 1.6;
+      }
+
+      .open-app {
+        display: none;
+        margin: 0 auto;
+        padding: 15px 34px;
+        border-radius: 999px;
+        background: var(--accent);
+        color: var(--button-text);
+        font-size: 1rem;
+        font-weight: 700;
+        text-decoration: none;
+        box-shadow: 0 12px 28px rgba(43, 185, 140, 0.35);
+      }
+
+      body[data-device="ios"] .open-app {
+        display: inline-block;
+      }
+
+      .footer {
+        color: var(--muted);
+        font-size: 0.85rem;
+      }
+
+      .footer a {
+        color: inherit;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <a class="brand" href="../" aria-label="Citylap home">
+      <img src="../citylap-icon-rounded.svg" alt="" aria-hidden="true" width="44" height="44" />
+      <span>Citylap<span class="tm">™</span></span>
+    </a>
+
+    <main class="card" id="card" data-tone="ok">
+      <div class="status-icon" aria-hidden="true">
+        <svg class="icon-ok" viewBox="0 0 20 20" fill="none">
+          <path
+            d="M4.2 10.4 8.2 14.4 15.8 6.2"
+            stroke="var(--accent)"
+            stroke-width="2.4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <svg class="icon-warn" viewBox="0 0 20 20" fill="none">
+          <path
+            d="M10 4.4v7.2"
+            stroke="var(--warn)"
+            stroke-width="2.4"
+            stroke-linecap="round"
+          />
+          <circle cx="10" cy="15.2" r="1.5" fill="var(--warn)" />
+        </svg>
+      </div>
+
+      <p class="eyebrow" id="eyebrow">Account verified</p>
+      <h1 id="headline">Email confirmed</h1>
+      <p class="copy" id="copy">
+        Open Citylap on your iPhone to continue.
+      </p>
+
+      <a class="open-app" id="open-app" href="citylap://auth">Open Citylap</a>
+    </main>
+
+    <p class="footer">
+      Trouble signing in?
+      <a href="mailto:info@technicalassemblage.com">Contact support</a>
+    </p>
+
+    <script>
+      (function () {
+        var APP_LINK_BASE = "citylap://auth";
+
+        var fragment = location.hash.length > 1 ? location.hash.slice(1) : "";
+        var query = location.search.length > 1 ? location.search.slice(1) : "";
+
+        function parseParams(raw) {
+          var out = {};
+          if (!raw) return out;
+          raw.split("&").forEach(function (pair) {
+            if (!pair) return;
+            var eq = pair.indexOf("=");
+            var key = eq < 0 ? pair : pair.slice(0, eq);
+            var value = eq < 0 ? "" : pair.slice(eq + 1);
+            try {
+              out[decodeURIComponent(key)] = decodeURIComponent(
+                value.replace(/\+/g, " ")
+              );
+            } catch (e) {
+              /* skip malformed pair */
+            }
+          });
+          return out;
+        }
+
+        // Fragment params win over query params, mirroring the app's parser.
+        var params = {};
+        var source = parseParams(query);
+        var fragmentParams = parseParams(fragment);
+        Object.keys(source).forEach(function (k) {
+          params[k] = source[k];
+        });
+        Object.keys(fragmentParams).forEach(function (k) {
+          params[k] = fragmentParams[k];
+        });
+
+        // Auth tokens must not linger in the address bar or browser history.
+        if (fragment || query) {
+          try {
+            history.replaceState(null, "", location.pathname);
+          } catch (e) {
+            /* non-fatal */
+          }
+        }
+
+        var hasError = !!(
+          params.error ||
+          params.error_code ||
+          params.error_description
+        );
+        var isRecovery = !hasError && params.type === "recovery";
+        var hasTokens =
+          !hasError &&
+          (!!(params.access_token && params.refresh_token) || !!params.code);
+
+        // Forward the original params into the app untouched; the fragment
+        // carries the session tokens the app uses to sign the user in. For
+        // password recovery, add the flow params the app's recovery UI keys on.
+        var deepLink = APP_LINK_BASE;
+        if (!hasError) {
+          var forwardQuery = query;
+          if (isRecovery) {
+            forwardQuery =
+              (forwardQuery ? forwardQuery + "&" : "") +
+              "type=recovery&flow=password-recovery";
+          }
+          if (forwardQuery) deepLink += "?" + forwardQuery;
+          if (fragment) deepLink += "#" + fragment;
+        }
+
+        var state;
+        if (hasError) {
+          state = params.error_code === "otp_expired" ? "expired" : "invalid";
+        } else if (isRecovery) {
+          state = "recovery";
+        } else if (hasTokens) {
+          state = "confirmed";
+        } else {
+          state = "plain";
+        }
+
+        var COPY = {
+          confirmed: {
+            tone: "ok",
+            eyebrow: "Account verified",
+            headline: "Email confirmed",
+            copy:
+              "Thanks for verifying your email. Tap below to hop back into Citylap — you'll be signed in automatically.",
+            hint:
+              "Your email is confirmed. Open Citylap on your iPhone and sign in to continue.",
+          },
+          recovery: {
+            tone: "ok",
+            eyebrow: "Password reset",
+            headline: "Reset your password",
+            copy:
+              "You're verified. Tap below to open Citylap and choose a new password.",
+            hint:
+              "Open the reset link from the email on your iPhone instead, or request a new reset email in Citylap.",
+          },
+          expired: {
+            tone: "warn",
+            eyebrow: "Link expired",
+            headline: "This link has expired",
+            copy:
+              "Email links only work once and expire after a short while. Open Citylap and request a fresh one — Resend email when signing up, or Forgot password for a reset.",
+            hint:
+              "Open Citylap on your iPhone and request a fresh link — Resend email when signing up, or Forgot password for a reset.",
+          },
+          invalid: {
+            tone: "warn",
+            eyebrow: "Link problem",
+            headline: "This link didn't work",
+            copy:
+              "This link is invalid or was already used. Open Citylap and request a fresh one.",
+            hint:
+              "Open Citylap on your iPhone and request a fresh link from the sign-in screen.",
+          },
+          plain: {
+            tone: "ok",
+            eyebrow: "Citylap account",
+            headline: "You're all set",
+            copy: "Return to the Citylap app to continue.",
+            hint: "Open Citylap on your iPhone to continue.",
+          },
+        };
+
+        var isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent);
+
+        function render(stateKey, ios, link) {
+          var text = COPY[stateKey];
+          document.getElementById("card").setAttribute("data-tone", text.tone);
+          document.getElementById("eyebrow").textContent = text.eyebrow;
+          document.getElementById("headline").textContent = text.headline;
+          document.getElementById("copy").textContent = ios
+            ? text.copy
+            : text.hint;
+          document.getElementById("open-app").setAttribute("href", link);
+          document.body.setAttribute("data-device", ios ? "ios" : "other");
+          document.title =
+            stateKey === "recovery"
+              ? "Citylap | Reset your password"
+              : "Citylap | " + text.headline;
+        }
+
+        render(state, isIOS, deepLink);
+
+        // One automatic hand-off attempt on iPhone when there is a session to
+        // forward; the button stays as the reliable user-gesture fallback.
+        if (isIOS && hasTokens) {
+          setTimeout(function () {
+            location.href = deepLink;
+          }, 400);
+        }
+      })();
+    </script>
+  </body>
+</html>
