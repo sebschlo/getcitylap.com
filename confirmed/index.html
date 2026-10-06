@@ -185,7 +185,8 @@
         box-shadow: 0 12px 28px rgba(43, 185, 140, 0.35);
       }
 
-      body[data-device="ios"] .open-app {
+      body[data-device="ios"] .open-app,
+      body[data-device="android"] .open-app {
         display: inline-block;
       }
 
@@ -231,7 +232,7 @@
       <p class="eyebrow" id="eyebrow">Account verified</p>
       <h1 id="headline">Email confirmed</h1>
       <p class="copy" id="copy">
-        Open Citylap on your iPhone to continue.
+        Open Citylap on your phone to continue.
       </p>
 
       <a class="open-app" id="open-app" href="citylap://auth">Open Citylap</a>
@@ -332,7 +333,7 @@
             copy:
               "Thanks for verifying your email. Tap below to hop back into Citylap — you'll be signed in automatically.",
             hint:
-              "Your email is confirmed. Open Citylap on your iPhone and sign in to continue.",
+              "Your email is confirmed. Open Citylap on your phone and sign in to continue.",
           },
           recovery: {
             tone: "ok",
@@ -341,7 +342,7 @@
             copy:
               "You're verified. Tap below to open Citylap and choose a new password.",
             hint:
-              "Open the reset link from the email on your iPhone instead, or request a new reset email in Citylap.",
+              "Open the reset link from the email on your phone instead, or request a new reset email in Citylap.",
           },
           expired: {
             tone: "warn",
@@ -350,7 +351,7 @@
             copy:
               "Email links only work once and expire after a short while. Open Citylap and request a fresh one — Resend email when signing up, or Forgot password for a reset.",
             hint:
-              "Open Citylap on your iPhone and request a fresh link — Resend email when signing up, or Forgot password for a reset.",
+              "Open Citylap on your phone and request a fresh link — Resend email when signing up, or Forgot password for a reset.",
           },
           invalid: {
             tone: "warn",
@@ -359,39 +360,42 @@
             copy:
               "This link is invalid or was already used. Open Citylap and request a fresh one.",
             hint:
-              "Open Citylap on your iPhone and request a fresh link from the sign-in screen.",
+              "Open Citylap on your phone and request a fresh link from the sign-in screen.",
           },
           plain: {
             tone: "ok",
             eyebrow: "Citylap account",
             headline: "You're all set",
             copy: "Return to the Citylap app to continue.",
-            hint: "Open Citylap on your iPhone to continue.",
+            hint: "Open Citylap on your phone to continue.",
           },
         };
 
         var isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent);
+        var isAndroid = /Android/.test(navigator.userAgent);
+        var device = isIOS ? "ios" : isAndroid ? "android" : "other";
 
-        function render(stateKey, ios, link) {
+        function render(stateKey, device, link) {
           var text = COPY[stateKey];
           document.getElementById("card").setAttribute("data-tone", text.tone);
           document.getElementById("eyebrow").textContent = text.eyebrow;
           document.getElementById("headline").textContent = text.headline;
-          document.getElementById("copy").textContent = ios
-            ? text.copy
-            : text.hint;
+          document.getElementById("copy").textContent =
+            device === "other" ? text.hint : text.copy;
           document.getElementById("open-app").setAttribute("href", link);
-          document.body.setAttribute("data-device", ios ? "ios" : "other");
+          document.body.setAttribute("data-device", device);
           document.title =
             stateKey === "recovery"
               ? "Citylap | Reset your password"
               : "Citylap | " + text.headline;
         }
 
-        render(state, isIOS, deepLink);
+        render(state, device, deepLink);
 
         // One automatic hand-off attempt on iPhone when there is a session to
         // forward; the button stays as the reliable user-gesture fallback.
+        // Not on Android: Chrome blocks custom-scheme navigations without a
+        // user gesture, so the button tap is the hand-off there.
         if (isIOS && hasTokens) {
           setTimeout(function () {
             location.href = deepLink;
