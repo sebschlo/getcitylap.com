@@ -108,6 +108,12 @@ a {
   font-weight: 600;
 }
 
+.topbar-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+}
+
 .topnav a:hover,
 .text-link:hover {
   color: var(--text);
@@ -366,6 +372,13 @@ a {
 .button-ghost {
   background: rgba(255, 255, 255, 0.52);
   border-color: var(--line);
+}
+
+.privacy-cta {
+  margin-top: 8px;
+  text-align: center;
+  color: var(--text);
+  font-weight: 700;
 }
 
 .button-secondary:hover,

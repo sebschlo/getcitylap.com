@@ -29,7 +29,12 @@
           <img class="brand-mark" src="./citylap-icon-rounded.svg" alt="" aria-hidden="true" width="48" height="48" />
           <span class="brand-text">Citylap<span class="tm">™</span></span>
         </span>
-        <a class="button button-nav" href="#download">Get the app</a>
+        <div class="topbar-actions">
+          <nav class="topnav" aria-label="Primary">
+            <a href="./geocoder/">How it works</a>
+          </nav>
+          <a class="button button-nav" href="#download">Get the app</a>
+        </div>
       </header>
 
       <main id="top">
@@ -108,7 +113,14 @@
                   <circle cx="10" cy="10" r="10" fill="#2bb98c" opacity="0.16"/>
                   <path d="M5.6 10.2 8.4 13l6-6.2" stroke="#2bb98c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                Own offline geocoder
+                <a href="./geocoder/" style="text-decoration: underline; text-underline-offset: 3px">Open source offline geocoder</a>
+              </div>
+              <div class="trust-item">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <circle cx="10" cy="10" r="10" fill="#2bb98c" opacity="0.16"/>
+                  <path d="M5.6 10.2 8.4 13l6-6.2" stroke="#2bb98c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                End-to-end encrypted
               </div>
             </div>
 
@@ -248,6 +260,7 @@
             <p>
               The result is connection that feels calm, clear, and actually private.
             </p>
+            <a class="button button-secondary privacy-cta" href="./geocoder/">See how your city is named on your phone →</a>
           </div>
         </section>
 
